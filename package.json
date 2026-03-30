@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "cd server && npm start",
+    "build": "cd server && npm install"
+  },
   "devDependencies": {
     "tsx": "^4.21.0"
   }

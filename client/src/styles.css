@@ -1,3 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+/* SomaHire V2 Global Styles */
+:root {
+  --teal: #2B8088;
+  --teal-dark: #145966;
+  --teal-gradient-end: #2b8c94;
+  --teal-light: #EDF7F7;
+  --teal-check: #38949e;
+  --teal-text-light: #d1ebed;
+  --orange: #F5A623;
+  --navy: #1A1F2E;
+  --form-bg: #f5f7fa;
+  --text-dark: #141414;
+  --text-gray: #666666;
+  --text-placeholder: #a6a6a6;
+  --border: #d9d9d9;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-dark);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Ensure all Angular component hosts are block-level and full-width */
+app-root > *,
+app-navbar,
+app-footer,
+app-home,
+app-services,
+app-pricing,
+app-about,
+app-contact,
+app-resources {
+  display: block;
+  width: 100%;
+}

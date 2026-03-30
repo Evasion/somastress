@@ -1,0 +1,23 @@
+# Build output
+dist/
+tmp/
+out-tsc/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Angular cache
+.angular/
+
+# Claude
+.claude/
+
+# Logs
+*.log
+npm-debug.log*

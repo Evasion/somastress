@@ -1,0 +1,444 @@
+/* SomaHire Contact Page Styles */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.page-inner {
+  width: 100%;
+  padding: 0 80px;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+  padding: 120px 80px;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--teal-text-light);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--teal-text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===== Contact Info Section ===== */
+.contact-info-section {
+  background: var(--white);
+  padding: 80px 80px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.info-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 8px 24px rgba(43, 128, 136, 0.12);
+  transform: translateY(-4px);
+}
+
+.info-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--teal-light);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.info-icon::after {
+  content: '';
+  width: 28px;
+  height: 28px;
+  background: var(--teal);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.phone-icon::after {
+  content: '📞';
+  background: none;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  font-size: 24px;
+}
+
+.email-icon::after {
+  content: '✉️';
+  background: none;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  font-size: 24px;
+}
+
+.address-icon::after {
+  content: '📍';
+  background: none;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  font-size: 24px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.info-main {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.info-sub {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* ===== Contact Form Section ===== */
+.contact-form-section {
+  background: var(--form-bg);
+  padding: 80px 80px;
+}
+
+.form-map-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(43, 128, 136, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-placeholder);
+}
+
+.map-column {
+  display: flex;
+  align-items: stretch;
+}
+
+.map-placeholder {
+  width: 100%;
+  min-height: 580px;
+  background: #e8e8e8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d0d0d0;
+}
+
+.map-content {
+  text-align: center;
+}
+
+.map-content p {
+  color: var(--text-gray);
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.map-address {
+  font-size: 13px;
+  color: var(--text-gray);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-submit {
+  background: var(--orange);
+  color: var(--text-dark);
+  align-self: flex-start;
+}
+
+.btn-submit:hover {
+  background: #e59b1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.25);
+}
+
+/* ===== Call CTA Banner ===== */
+.call-banner {
+  background: var(--teal);
+  padding: 60px 80px;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.banner-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.btn-call {
+  background: var(--orange);
+  color: var(--text-dark);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-call:hover {
+  background: #e59b1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.25);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .form-map-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-placeholder {
+    min-height: 400px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-content h2 {
+    font-size: 24px;
+  }
+
+  .btn-call {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 24px;
+  }
+
+  .contact-info-section,
+  .contact-form-section,
+  .call-banner {
+    padding: 60px 24px;
+  }
+
+  .page-inner {
+    padding: 0 24px;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-map-wrapper {
+    gap: 30px;
+  }
+
+  .map-placeholder {
+    min-height: 300px;
+  }
+
+  .form-group form {
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .banner-content {
+    gap: 20px;
+  }
+
+  .banner-content h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .contact-info-section,
+  .contact-form-section,
+  .call-banner {
+    padding: 40px 16px;
+  }
+
+  .page-inner {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+
+  .info-card h3 {
+    font-size: 16px;
+  }
+
+  .info-main {
+    font-size: 14px;
+  }
+
+  .info-sub {
+    font-size: 12px;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .map-placeholder {
+    min-height: 250px;
+  }
+
+  .call-banner {
+    padding: 40px 16px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .banner-content h2 {
+    font-size: 18px;
+  }
+
+  .btn-call {
+    width: 100%;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+  }
+}

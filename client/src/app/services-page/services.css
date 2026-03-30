@@ -1,0 +1,259 @@
+/* Global Styles */
+:host {
+  display: block;
+  width: 100%;
+  --color-teal: #2B8088;
+  --color-dark-teal: #1E6A72;
+  --color-teal-light: #145966;
+  --color-orange: #F5A623;
+  --color-navy: #1A1F2E;
+  --color-light-bg: #F9FAFB;
+  --color-placeholder-bg: #F5F7FA;
+  --color-white: #FFFFFF;
+  --color-text-dark: #595966;
+  --color-text-light: #d1ebed;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #145966 0%, #2B8088 100%);
+  padding: 60px 80px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Service Sections */
+.service-section {
+  padding: 80px 0;
+}
+
+.service-section.white-bg {
+  background-color: var(--color-white);
+}
+
+.service-section.light-bg {
+  background-color: var(--color-light-bg);
+}
+
+.section-container {
+  width: 100%;
+  padding: 0 80px;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-grid.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-grid.reverse > :first-child {
+  order: 2;
+}
+
+.section-grid.reverse > :last-child {
+  order: 1;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-placeholder-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content Column */
+.content-column {
+  padding: 0 20px;
+}
+
+.section-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.content-column h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.content-column p {
+  font-size: 15px;
+  color: var(--color-text-dark);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.content-column p:last-of-type {
+  margin-bottom: 30px;
+}
+
+/* Bullet List */
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-list li {
+  font-size: 15px;
+  color: var(--color-text-dark);
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.bullet-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-teal);
+  border-radius: 50%;
+}
+
+.bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .service-section {
+    padding: 40px 0;
+  }
+
+  .section-container {
+    padding: 0 20px;
+  }
+
+  .section-grid,
+  .section-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-grid.reverse > :first-child,
+  .section-grid.reverse > :last-child {
+    order: unset;
+  }
+
+  .image-placeholder {
+    height: 300px;
+  }
+
+  .content-column {
+    padding: 0;
+  }
+
+  .content-column h2 {
+    font-size: 24px;
+  }
+
+  .content-column p {
+    font-size: 14px;
+  }
+
+  .bullet-list li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    padding: 30px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .service-section {
+    padding: 30px 0;
+  }
+
+  .section-container {
+    padding: 0 15px;
+  }
+
+  .section-grid {
+    gap: 20px;
+  }
+
+  .content-column h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .content-column p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+}

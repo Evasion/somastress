@@ -1,0 +1,97 @@
+<!-- Hero Banner -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="breadcrumb">Home / Resources</div>
+    <h1 class="hero-title">Resources and Downloads</h1>
+    <p class="hero-subtitle">Access valuable materials to optimize your hiring process and team building.</p>
+  </div>
+</section>
+
+<!-- Free Resources Section -->
+<section class="free-resources-section">
+  <div class="page-inner">
+    <div class="section-header">
+      <span class="section-label">Free Resources</span>
+      <h2 class="section-title">Start With Our Free Materials</h2>
+      <p class="section-subtitle">No registration required. Download immediately and start improving your hiring today.</p>
+    </div>
+
+    <div class="resources-grid">
+      <div class="resource-card" *ngFor="let resource of freeResources">
+        <img src="/images/image14.png" alt="{{ resource.title }}" class="resource-image" />
+        <div class="resource-badge">{{ resource.badge }}</div>
+        <h3 class="resource-title">{{ resource.title }}</h3>
+        <p class="resource-description">{{ resource.description }}</p>
+        <button class="btn btn-download" (click)="onDownload(resource.title)">Download Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Downloads Section -->
+<section class="additional-downloads-section">
+  <div class="page-inner">
+    <div class="section-header">
+      <span class="section-label">Additional Downloads</span>
+      <h2 class="section-title">More Professional Resources</h2>
+    </div>
+
+    <div class="downloads-list">
+      <div class="download-item" *ngFor="let download of additionalDownloads">
+        <div class="download-icon"></div>
+        <div class="download-content">
+          <h3>{{ download.title }}</h3>
+          <p>{{ download.description }}</p>
+        </div>
+        <button class="btn btn-download-small" (click)="onDownload(download.title)">Download</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hiring Guide Section -->
+<section class="guide-section">
+  <div class="page-inner">
+    <div class="guide-header">
+      <span class="section-label">Premium Resource</span>
+      <h2 class="section-title">The Complete Hiring Guide</h2>
+    </div>
+
+    <div class="guide-content">
+      <img src="/images/image15.png" alt="The Complete Hiring Guide Cover" class="guide-image" />
+
+      <div class="guide-details">
+        <h3>The Complete Hiring Guide</h3>
+        <p>Our comprehensive guide covers everything you need to know about modern hiring practices, from candidate assessment to onboarding. Written by industry experts with decades of combined experience, this guide provides actionable strategies you can implement immediately.</p>
+
+        <div class="guide-highlights">
+          <h4>What's Inside:</h4>
+          <ul>
+            <li>Proven recruitment strategies that reduce time-to-hire</li>
+            <li>Assessment techniques to identify top performers</li>
+            <li>Building resilient teams through stress testing</li>
+            <li>Onboarding best practices for long-term success</li>
+            <li>Case studies from leading organizations</li>
+            <li>Templates and checklists you can use immediately</li>
+          </ul>
+        </div>
+
+        <div class="guide-purchase">
+          <div class="guide-price">$125</div>
+          <button class="btn btn-purchase" (click)="onPurchase()">Purchase Guide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="cta-bottom">
+  <div class="page-inner">
+    <h2>Not Sure Where to Start?</h2>
+    <div class="cta-buttons">
+      <button class="btn btn-cta-primary">Browse All Resources</button>
+      <button class="btn btn-cta-secondary">Schedule a Demo</button>
+    </div>
+  </div>
+</section>

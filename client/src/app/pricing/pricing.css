@@ -1,0 +1,482 @@
+/* Global Styles */
+:host {
+  display: block;
+  width: 100%;
+  --color-teal: #2B8088;
+  --color-dark-teal: #1E6A72;
+  --color-teal-light: #145966;
+  --color-orange: #F5A623;
+  --color-navy: #1A1F2E;
+  --color-light-bg: #F9FAFB;
+  --color-white: #FFFFFF;
+  --color-text-dark: #595966;
+  --color-text-light: #d1ebed;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: var(--font-family);
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #145966 0%, #2B8088 100%);
+  padding: 60px 80px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section Container */
+.section-container {
+  width: 100%;
+  padding: 0 80px;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.section-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Pricing Cards Grid */
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background-color: var(--color-white);
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 10px 30px rgba(43, 128, 136, 0.1);
+}
+
+.pricing-card.featured {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  border-color: var(--color-teal);
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(43, 128, 136, 0.2);
+}
+
+.pricing-card.featured .price,
+.pricing-card.featured h3,
+.pricing-card.featured .price-label,
+.pricing-card.featured .features-list li {
+  color: var(--color-white);
+}
+
+.pricing-card.featured .features-list li:before {
+  background-color: var(--color-orange);
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-teal);
+  margin: 20px 0 5px 0;
+}
+
+.pricing-card.featured .price {
+  color: var(--color-white);
+}
+
+.price-label {
+  font-size: 14px;
+  color: var(--color-text-dark);
+  margin-bottom: 25px;
+}
+
+.pricing-card.featured .price-label {
+  color: var(--color-text-light);
+}
+
+.pricing-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 25px;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+.features-list li {
+  font-size: 14px;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.features-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-teal);
+  border-radius: 50%;
+}
+
+.features-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Additional Products Section */
+.additional-products-section {
+  padding: 80px 0;
+  background-color: var(--color-light-bg);
+}
+
+.additional-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.additional-card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.price-large {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-teal);
+  margin-bottom: 5px;
+}
+
+.additional-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin: 15px 0 20px 0;
+}
+
+.product-description {
+  font-size: 15px;
+  color: var(--color-text-dark);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #145966 0%, #2B8088 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.cta-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.8;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  border-color: var(--color-teal);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-teal);
+  border-color: var(--color-dark-teal);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-teal);
+  border-color: var(--color-teal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.btn-accent {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+}
+
+.btn-accent:hover {
+  background-color: #E59811;
+  border-color: #E59811;
+}
+
+.btn-accent-large {
+  font-size: 15px;
+  padding: 15px 40px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+}
+
+.btn-accent-large:hover {
+  background-color: #E59811;
+  border-color: #E59811;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .pricing-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-card.featured {
+    transform: scale(1.02);
+  }
+
+  .additional-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .section-container {
+    padding: 0 20px;
+  }
+
+  .pricing-section,
+  .additional-products-section,
+  .cta-section {
+    padding: 50px 0;
+  }
+
+  .section-heading {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pricing-card,
+  .additional-card {
+    padding: 30px 20px;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .price-large {
+    font-size: 28px;
+  }
+
+  .additional-card h3 {
+    font-size: 18px;
+  }
+
+  .product-description {
+    font-size: 14px;
+  }
+
+  .cta-heading {
+    font-size: 24px;
+  }
+
+  .cta-subtitle {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  .btn-accent-large {
+    padding: 12px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    padding: 30px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .section-container {
+    padding: 0 15px;
+  }
+
+  .pricing-section,
+  .additional-products-section,
+  .cta-section {
+    padding: 30px 0;
+  }
+
+  .section-heading {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .pricing-card,
+  .additional-card {
+    padding: 25px 15px;
+  }
+
+  .price,
+  .price-large {
+    font-size: 24px;
+  }
+
+  .pricing-card h3,
+  .additional-card h3 {
+    font-size: 16px;
+  }
+
+  .features-list li,
+  .product-description {
+    font-size: 13px;
+  }
+
+  .cta-heading {
+    font-size: 20px;
+  }
+
+  .cta-subtitle {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .btn-accent-large {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}

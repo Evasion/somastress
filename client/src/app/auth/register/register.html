@@ -1,0 +1,171 @@
+<div class="auth-container">
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <div class="brand">
+      <img src="/images/logo.png" alt="SomaHire LLC" class="brand-logo" />
+    </div>
+
+    <div class="welcome-section">
+      <h1 class="welcome-heading">Get Started Today</h1>
+      <p class="welcome-sub">
+        Create your account to access free personality tests, stress assessments, and our comprehensive hiring resources.
+      </p>
+    </div>
+
+    <ul class="feature-list">
+      <li class="feature-item">
+        <span class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.3 4.3L6.5 11.1L2.7 7.3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>1 Free personality test included</span>
+      </li>
+      <li class="feature-item">
+        <span class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.3 4.3L6.5 11.1L2.7 7.3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>Free stress manual download</span>
+      </li>
+      <li class="feature-item">
+        <span class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.3 4.3L6.5 11.1L2.7 7.3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>Volume discounts on bulk tests</span>
+      </li>
+    </ul>
+
+    <div class="left-bg-image">
+      <img src="/images/register-bg.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="right-panel">
+    <div class="form-card">
+      <h2 class="form-title">Create Account</h2>
+      <p class="form-subtitle">Fill in your details to get started</p>
+
+      <!-- Google OAuth -->
+      <button class="google-btn" (click)="onGoogleRegister()">
+        <svg width="20" height="20" viewBox="0 0 48 48">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-text">or</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Error message -->
+      @if (auth.error()) {
+        <div class="error-banner">
+          {{ auth.error() }}
+        </div>
+      }
+
+      <!-- Register Form -->
+      <form (submit)="onSubmit($event)">
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input
+            id="fullName"
+            type="text"
+            placeholder="Enter your full name"
+            [value]="fullName()"
+            (input)="fullName.set($any($event.target).value)"
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="you&#64;example.com"
+            [value]="email()"
+            (input)="email.set($any($event.target).value)"
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              id="password"
+              [type]="showPassword() ? 'text' : 'password'"
+              placeholder="Create a password"
+              [value]="password()"
+              (input)="password.set($any($event.target).value)"
+              autocomplete="new-password"
+            />
+            <button type="button" class="toggle-pw" (click)="togglePassword()">
+              {{ showPassword() ? 'Hide' : 'Show' }}
+            </button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            id="confirmPassword"
+            [type]="showPassword() ? 'text' : 'password'"
+            placeholder="Confirm your password"
+            [value]="confirmPassword()"
+            (input)="confirmPassword.set($any($event.target).value)"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <div class="field">
+          <label>Gender</label>
+          <div class="gender-buttons">
+            <button
+              type="button"
+              class="gender-btn"
+              [class.active]="gender() === 'male'"
+              (click)="selectGender('male')"
+            >Male</button>
+            <button
+              type="button"
+              class="gender-btn"
+              [class.active]="gender() === 'female'"
+              (click)="selectGender('female')"
+            >Female</button>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="submit-btn"
+          [disabled]="auth.isLoading()"
+        >
+          @if (auth.isLoading()) {
+            <span class="spinner"></span>
+            Creating account...
+          } @else {
+            Create Account
+          }
+        </button>
+      </form>
+
+      <p class="switch-text">
+        Already have an account?
+        <a routerLink="/login" class="switch-link">Sign in</a>
+      </p>
+    </div>
+  </div>
+</div>

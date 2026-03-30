@@ -1,0 +1,376 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* ── Auth Container ── */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ── Left Panel ── */
+.left-panel {
+  width: 42%;
+  min-width: 420px;
+  background: linear-gradient(165deg, #145966 0%, #2b8c94 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 48px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand {
+  margin-bottom: 0;
+}
+
+.brand-logo {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+}
+
+.welcome-section {
+  margin-top: auto;
+  padding-bottom: 16px;
+}
+
+.welcome-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.welcome-sub {
+  font-size: 17px;
+  font-weight: 400;
+  color: #d1ebed;
+  line-height: 1.6;
+  margin-top: 16px;
+  max-width: 400px;
+}
+
+/* ── Feature list ── */
+.feature-list {
+  list-style: none;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.check-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #38949e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Background image at bottom ── */
+.left-bg-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.left-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Right Panel ── */
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+  padding: 40px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #141414;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 32px;
+}
+
+/* ── Google button ── */
+.google-btn {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #141414;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.google-btn:hover {
+  background: #f9f9f9;
+  border-color: #bbb;
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.divider-text {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+}
+
+/* ── Error banner ── */
+.error-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ── Form fields ── */
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #141414;
+  margin-bottom: 8px;
+}
+
+.field input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #141414;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input::placeholder {
+  color: #a6a6a6;
+}
+
+.field input:focus {
+  border-color: #2B8088;
+  box-shadow: 0 0 0 3px rgba(43, 128, 136, 0.1);
+}
+
+/* ── Password toggle ── */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 64px;
+}
+
+.toggle-pw {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2B8088;
+  cursor: pointer;
+}
+
+.toggle-pw:hover {
+  color: #1e5a61;
+}
+
+/* ── Form options (remember + forgot) ── */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  accent-color: #2B8088;
+  cursor: pointer;
+}
+
+.forgot-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2B8088;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #2B8088;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #1e5a61;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Loading spinner ── */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Switch text ── */
+.switch-text {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 28px;
+}
+
+.switch-link {
+  color: #2B8088;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    min-width: unset;
+    min-height: 320px;
+    padding: 32px 24px;
+  }
+
+  .welcome-heading {
+    font-size: 32px;
+  }
+
+  .left-bg-image {
+    height: 160px;
+  }
+
+  .right-panel {
+    padding: 24px;
+  }
+
+  .form-card {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,44 @@
+<!-- Top Info Bar -->
+<div class="navbar-top-bar">
+  <div class="navbar-top-content">
+    <div class="navbar-top-left">
+      <span>{{ contactInfo.phone }} | {{ contactInfo.email }}</span>
+    </div>
+    <div class="navbar-top-right">
+      <span>{{ contactInfo.hours }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navigation Bar -->
+<nav class="navbar-main">
+  <div class="navbar-main-content">
+    <!-- Logo -->
+    <div class="navbar-logo">
+      <img src="/images/logo-transparent.png" alt="SomaHire Logo" />
+    </div>
+
+    <!-- Center Navigation Links -->
+    <ul class="navbar-links">
+      <li *ngFor="let link of navLinks">
+        <a
+          [routerLink]="link.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+        >
+          {{ link.label }}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right Side Buttons -->
+    <div class="navbar-actions">
+      <a [routerLink]="loginRoute" class="btn-login">Login</a>
+      <a [routerLink]="registerRoute" class="btn-free-test">Free Test</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Divider Line -->
+<div class="navbar-divider"></div>

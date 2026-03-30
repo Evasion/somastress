@@ -1,0 +1,482 @@
+/* SomaHire About Page Styles */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.page-inner {
+  width: 100%;
+  padding: 0 80px;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+  padding: 120px 80px;
+  text-align: center;
+  color: var(--white);
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--teal-text-light);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--teal-text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===== Founder Section ===== */
+.founder-section {
+  background: var(--white);
+  padding: 80px 80px;
+}
+
+.founder-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.founder-section .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.founder-subtitle {
+  font-size: 24px;
+  color: var(--text-gray);
+  margin-bottom: 60px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.founder-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.founder-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.founder-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.founder-card {
+  background: var(--teal);
+  color: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.founder-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.founder-card p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.founder-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.founder-right p {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.8;
+}
+
+/* ===== Quote Section ===== */
+.quote-section {
+  background: var(--teal-light);
+  padding: 80px 80px;
+  text-align: center;
+}
+
+.quote-mark {
+  font-size: 120px;
+  color: var(--teal);
+  line-height: 0.8;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.quote-text {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-attribution {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ===== Career Highlights Section ===== */
+.highlights-section {
+  background: var(--white);
+  padding: 80px 80px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 60px;
+}
+
+.section-title.centered {
+  text-align: center;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.highlight-card {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 8px 24px rgba(43, 128, 136, 0.1);
+  transform: translateY(-4px);
+}
+
+.highlight-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--teal-light);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 2px solid var(--teal);
+  opacity: 0.6;
+}
+
+.highlight-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.highlight-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===== Bio Continued Section ===== */
+.bio-continued {
+  background: var(--form-bg);
+  padding: 60px 80px;
+}
+
+.bio-continued p {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.bio-continued p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Mission Section ===== */
+.mission-section {
+  background: var(--white);
+  padding: 80px 80px;
+}
+
+.mission-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.mission-section .section-title {
+  text-align: center;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.mission-card {
+  background: var(--white);
+  padding: 40px 32px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 12px 32px rgba(43, 128, 136, 0.12);
+  transform: translateY(-4px);
+}
+
+.mission-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.mission-card p {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+/* ===== CTA Banner Section ===== */
+.cta-banner {
+  background: var(--teal);
+  padding: 80px 80px;
+  text-align: center;
+  color: var(--white);
+}
+
+.banner-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-banner-primary {
+  background: var(--orange);
+  color: var(--text-dark);
+}
+
+.btn-banner-primary:hover {
+  background: #e59b1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.25);
+}
+
+.btn-banner-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-banner-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .founder-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 24px;
+  }
+
+  .founder-section,
+  .quote-section,
+  .highlights-section,
+  .bio-continued,
+  .mission-section,
+  .cta-banner {
+    padding: 60px 24px;
+  }
+
+  .page-inner {
+    padding: 0 24px;
+  }
+
+  .founder-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .founder-right p,
+  .bio-continued p {
+    font-size: 14px;
+  }
+
+  .highlights-grid,
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .quote-mark {
+    font-size: 80px;
+  }
+
+  .quote-text {
+    font-size: 18px;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+  }
+
+  .banner-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .founder-section,
+  .quote-section,
+  .highlights-section,
+  .bio-continued,
+  .mission-section,
+  .cta-banner {
+    padding: 40px 16px;
+  }
+
+  .page-inner {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .founder-subtitle {
+    font-size: 18px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+  }
+
+  .highlight-card h3,
+  .mission-card h3 {
+    font-size: 14px;
+  }
+
+  .highlight-card p,
+  .mission-card p {
+    font-size: 12px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+}
